@@ -2787,7 +2787,7 @@
 	<!-- POSITIONERSETUP -->
   <screen name="PositionerSetup" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
 	<panel name="StanDardScreen"/>
-	<panel name="Template_Pip"/>
+	<panel name="Template_not_Pip"/>
 	<ePixmap alphatest="blend" pixmap="buttons/key_menu.png" position="33,960" size="64,43"/>
 	<ePixmap alphatest="blend" pixmap="buttons/key_info.png" position="33,900" size="64,43"/>
 	<widget name="list" itemHeight="50" font="FHD;30" backgroundColor="black" foregroundColor="OE_Foreground" position="125,150" size="1255,500" transparent="1"/>
@@ -2903,17 +2903,17 @@
   <screen name="ServiceScan" title="Service Scan" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
 	<panel name="StanDardScreen"/>
 	<panel name="Template_Pip"/>
-	<widget alphatest="blend" pixmap="icons/scan-s.png" position="1290,180" render="Pixmap" size="110,110" source="FrontendInfo" transparent="1">
+	<widget alphatest="blend" pixmap="icons/scan-s.png" position="1230,180" render="Pixmap" size="110,110" source="FrontendInfo" transparent="1">
 	    <convert type="FrontendInfo">TYPE</convert>
 	    <convert type="ValueRange">0,0</convert>
 	    <convert type="ConditionalShowHide"/>
 	</widget>
-	<widget alphatest="blend" pixmap="icons/scan-c.png" position="1290,180" render="Pixmap" size="110,110" source="FrontendInfo" transparent="1">
+	<widget alphatest="blend" pixmap="icons/scan-c.png" position="1230,180" render="Pixmap" size="110,110" source="FrontendInfo" transparent="1">
 	    <convert type="FrontendInfo">TYPE</convert>
 	    <convert type="ValueRange">1,1</convert>
 	    <convert type="ConditionalShowHide"/>
 	</widget>
-	<widget alphatest="blend" pixmap="icons/scan-t.png" position="1290,180" render="Pixmap" size="110,110" source="FrontendInfo" transparent="1">
+	<widget alphatest="blend" pixmap="icons/scan-t.png" position="1230,180" render="Pixmap" size="110,110" source="FrontendInfo" transparent="1">
 	    <convert type="FrontendInfo">TYPE</convert>
 	    <convert type="ValueRange">2,2</convert>
 	    <convert type="ConditionalShowHide"/>
@@ -2928,7 +2928,7 @@
 	<!-- FAST SCANING -->
   <screen name="FastScanScreen" title="Fast Scan" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
 	<panel name="StanDardScreen"/>
-	<panel name="Template_not_Pip"/>
+	<panel name="Template_Pip"/>
 	<widget name="config" itemHeight="50" font="FHD;30" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light" enableWrapAround="1" backgroundColor="OE_Background" position="125,160" size="1255,700" transparent="1"/>
   </screen>
   <screen name="FastScanStatus" title="Fast Scan" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
@@ -2986,9 +2986,8 @@
 	<!-- TERRESTRIAL SCAN -->
   <screen name="TerrestrialScanScreen" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
 	<panel name="StanDardScreen"/>
-	<panel name="Template_not_Pip"/>
+	<panel name="Template_Pip"/>
 	<widget name="config" itemHeight="50" font="FHD;30" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light" enableWrapAround="1" backgroundColor="OE_Background" position="125,140" size="1255,800" transparent="1"/>
-	<widget name="description" position="1410,150" size="500,650" font="RegularBold;26" halign="center" valign="center" backgroundColor="OE_Background" transparent="1" zPosition="2"/>
   </screen>
   <screen name="ServiceInfoSimple" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
 	<panel name="StanDardScreen"/>
