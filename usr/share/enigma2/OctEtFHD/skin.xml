@@ -2744,7 +2744,7 @@
 	<!-- SERVICES FOUND -->
   <screen name="ServicesFound" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
 	<panel name="StanDardScreen"/>
-	<!-- Widget -->
+	<panel name="TemplateNoPip"/>
 	<widget name="legend" font="FHD;30" backgroundColor="OE_Background" position="110,185" size="1255,45" transparent="1"/>
 	<widget name="servicesfound" font="RegularBold;30" backgroundColor="OE_Background" foregroundColor="green_light" position="110,369" size="1255,550" transparent="1"/>
   </screen>
@@ -2930,7 +2930,7 @@
 	<ePixmap alphatest="blend" pixmap="buttons/key_info.png" position="18,980" size="64,43"/>
 	<widget name="timerlist" itemHeight="95" setEventNameFont="RegularBold;21" setServiceNameFont="RegularBold;22" setFont="RegularBold;23" backgroundColor="OE_Background" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light" position="110,140" satPosLeft="400" rowSplit="45" size="1255,820" transparent="1"/>
 	<widget name="key_info" conditional="key_info" position="48,960" size="0,0" zPosition="-20"/>
-	<widget name="description" objectTypes="description,Button,Label" position="1395,440" size="515,635" font="RegularBold;21" halign="center" valign="center" backgroundColor="OE_Background" transparent="1" zPosition="2"/>
+	<widget name="description" objectTypes="description,Button,Label" position="1395,440" size="515,635" font="RegularBold;21" halign="center" valign="center" backgroundColor="OE_NewBg2" transparent="1" zPosition="2"/>
   </screen>
 	<!-- TIMERENTRY -->
   <screen name="TimerEntry" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
