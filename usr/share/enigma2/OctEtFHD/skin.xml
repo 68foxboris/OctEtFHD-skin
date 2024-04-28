@@ -463,7 +463,7 @@
 		</widget>
 		<widget backgroundColor="OE_Background" font="RegularBold;28" horizontalAlignment="right" position="1580,935" render="Label" size="265,70" source="session.Event_Now" transparent="1">
 			<convert type="EventTime">Remaining</convert>
-			<convert type="RemainingToText">NoSeconds</convert>
+			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Progress" backgroundColor="OE_NewBg" pixmap="colors/green_light.png" position="336,975" size="1510,4" transparent="0" zPosition="7">
 			<convert type="EventTime">Progress</convert>
@@ -481,7 +481,7 @@
 		</widget>
 		<widget backgroundColor="OE_Background" font="RegularBold;28" horizontalAlignment="right" position="1681,988" render="Label" size="165,45" source="session.Event_Next" transparent="1">
 			<convert type="EventTime">Duration</convert>
-			<convert type="ClockToText">AsLengthHours</convert>
+			<convert type="ClockToText">InMinutes</convert>
 		</widget>
 		<eLabel backgroundColor="OE_Accent1" foregroundColor="OE_Accent1" name="new eLabel" position="336,977" size="1510,2"/>
 		<!-- CryptoInfo -->
@@ -640,7 +640,7 @@
 		</widget>
 		<widget backgroundColor="OE_ListBackground" font="RegularBold;30" horizontalAlignment="right" position="1420,180" render="Label" size="265,48" source="session.Event_Now" transparent="1">
 			<convert type="EventTime">Remaining</convert>
-			<convert type="RemainingToText">NoSeconds</convert>
+			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Progress" foregroundColor="blue_light" backgroundColor="green_light" position="665,225" size="1020,6" transparent="0" zPosition="10">
 			<convert type="EventTime">Progress</convert>
@@ -658,7 +658,7 @@
 		</widget>
 		<widget backgroundColor="OE_ListBackground" font="RegularBold;30" horizontalAlignment="right" position="1520,635" render="Label" size="165,48" source="session.Event_Next" transparent="1">
 			<convert type="EventTime">Duration</convert>
-			<convert type="ClockToText">AsLengthHours</convert>
+			<convert type="ClockToText">InMinutes</convert>
 		</widget>
 		<widget source="session.Event_Next" backgroundColor="OE_Accent1" pixmap="colors/green_light.png" position="665,673" size="1020,2" render="Progress" transparent="0" zPosition="1">
 			<convert type="EventTime">Progress</convert>
@@ -733,10 +733,10 @@
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 		<!-- CryptoInfo -->
-		<widget source="session.CurrentService" render="PicCript" path="OctEtFHD/cript" position="470,965" size="98,31" alphaTest="blend" zPosition="3"/>
+		<widget source="session.CurrentService" render="PicCript" path="cript" position="470,965" size="98,31" alphaTest="blend" zPosition="3"/>
 		<panel name="Clock"/>
 		<widget source="session.CurrentService" render="PicEmu2" path="OctEtFHD/emu" position="540,965" size="98,31" transparent="1" alphaTest="blend" zPosition="3"/>
-		<widget source="session.CurrentService" render="Label" font="RegularBold;21" position="660,965" size="450,35" zPosition="50" backgroundColor="OE_ListBackground" transparent="1" noWrap="1">
+		<widget source="session.CurrentService" render="Label" font="RegularBold;21" position="540,965" size="565,35" zPosition="50" backgroundColor="OE_ListBackground" transparent="1" noWrap="1">
 			<convert type="CaidInfo2"/>
 		</widget>
 		 <!-- MSNWeather -->
@@ -1084,7 +1084,7 @@
 		</widget>
 		<widget source="Event" render="Label" backgroundColor="OE_NewBg2" font="RegularBold;28" foregroundColor="blue_light" position="365,225" size="200,30" transparent="1">
 			<convert type="EventTime">Remaining</convert>
-			<convert type="RemainingToText">NoSeconds</convert>
+			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
 		<widget alphaTest="blend" position="415,260" render="Picon" size="100,60" source="ServiceEvent" transparent="1" zPosition="2">
 			<convert type="ServiceName">Reference</convert>
@@ -1324,7 +1324,7 @@
 		</widget>
 		<widget source="Event" render="Label" backgroundColor="OE_Background" font="RegularBold;28" horizontalAlignment="right" position="493,200" size="200,40" transparent="1">
 			<convert type="EventTime">Remaining</convert>
-			<convert type="RemainingToText">NoSeconds</convert>
+			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
 		<eLabel backgroundColor="OE_Accent1" foregroundColor="OE_Accent1" position="81,244" size="570,1"/>
 		<widget backgroundColor="OE_PreBlack2" pixmap="colors/green_light.png" position="80,242" render="Progress" size="570,5" source="ServiceEvent" transparent="1" zPosition="1">
@@ -1704,7 +1704,7 @@
 		<widget name="duration" foregroundColor="blue_light" backgroundColor="OE_NewBg2" font="RegularBold;30" horizontalAlignment="center" position="85,215" size="195,45" transparent="1" zPosition="2"/>
 		<widget source="Event" render="Label" position="85,275" size="195,45" transparent="1" zPosition="2" backgroundColor="OE_NewBg2" font="RegularBold;30" horizontalAlignment="center">
 			<convert type="EventTime">Remaining</convert>
-			<convert type="RemainingToText">NoSeconds</convert>
+			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
 		<widget alphaTest="blend" position="75,335" render="Picon" size="220,132" source="Title" transparent="1" zPosition="5">
 			<convert type="RefString">CurrentRef</convert>
@@ -3232,7 +3232,6 @@
 	<!-- ####### Subtitle Display ####### -->
 	<screen backgroundColor="OE_Background" flags="wfNoBorder" name="Standby" position="0,0" size="1920,1080" title="Standby"/>
 	<screen name="SubtitleDisplay" position="fill" zPosition="-1" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="message"/>
 	</screen>
 	<!-- ####### SUBSERVICES QUICK ZAP ####### -->
 	<screen name="SubservicesQuickzap" backgroundColor="transparent" flags="wfNoBorder" position="570,850" size="840,100" title="Subservices">

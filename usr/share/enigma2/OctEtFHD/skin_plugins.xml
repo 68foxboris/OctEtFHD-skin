@@ -1350,7 +1350,7 @@
 	</widget>
 	<widget source="Event" render="Label" backgroundColor="OE_Background" font="RegularBold;28" horizontalAlignment="right" position="435,153" size="165,40" transparent="1">
 	    <convert type="EventTime">Remaining</convert>
-	    <convert type="RemainingToText">InMinutes</convert>
+	    <convert type="RemainingToText"></convert>
 	</widget>
 	<widget source="Event" font="Regular;28" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=100,startdelay=4000,wrap,always=0" backgroundColor="OE_Background" position="80,210" size="520,530" transparent="1">
 	    <convert type="EventName">ExtendedDescription</convert>
@@ -1435,7 +1435,7 @@
 	</widget>
 	<widget source="Event" render="Label" backgroundColor="OE_NewBg2" font="RegularBold;28" horizontalAlignment="right" position="440,240" size="160,40" transparent="1">
 	    <convert type="EventTime">Remaining</convert>
-	    <convert type="RemainingToText">InMinutes</convert>
+	    <convert type="RemainingToText"></convert>
 	</widget>
 	<widget name="list" itemHeight="50" CoolFont="RegularBold;25" CoolEventFont="RegularBold;25" CoolDayHPos="5" CoolDayPos="0" CoolDaySize="50" CoolTimeHPos="5" CoolTimePos="75" CoolTimeSize="75" CoolEventHPos="5" CoolEventPos="160" CoolEventSize="1100" CoolDayColor="blue_light" CoolTimeColor="white" CoolEventColor="green_light" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" CoolBackColor="OE_Background" CoolBackColorSel="OE_Selection" backgroundColor="OE_Background" foregroundColor="OE_Foreground" transparent="1" position="630,155" size="1200,750" zPosition="25"/>
 	<!-- Button -->
@@ -1479,7 +1479,7 @@
 	</widget>
 	<widget source="Event" render="Label" backgroundColor="OE_NewBg2" font="RegularBold;28" horizontalAlignment="right" position="440,240" size="160,40" transparent="1">
 	    <convert type="EventTime">Remaining</convert>
-	    <convert type="RemainingToText">InMinutes</convert>
+	    <convert type="RemainingToText"></convert>
 	</widget>
 	<widget name="timeline_now" position="0,210" zPosition="2" size="17,705" pixmap="extensions/timeline-now.png" alphaTest="blend"/>
 	<widget name="timeline_text" font="RegularBold;28" position="630,155" size="1200,45" transparent="0" backgroundColor="dark"/>
@@ -1521,7 +1521,7 @@
 	</widget>
 	<widget source="Event" render="Label" backgroundColor="OE_Background" font="RegularBold;28" horizontalAlignment="right" position="435,153" size="165,40" transparent="1">
 	    <convert type="EventTime">Remaining</convert>
-	    <convert type="RemainingToText">InMinutes</convert>
+	    <convert type="RemainingToText"></convert>
 	</widget>
 	<widget name="CoolShort" position="80,193" size="520,250" font="RegularBold;28" backgroundColor="OE_NewBg2" transparent="1" verticalAlignment="top"/>
 	<eLabel position="80,545" size="520,55" font="RegularBold;25" backgroundColor="OE_NewBg2" shadowColor="#000000" transparent="1" foregroundColor="blue_light" text="Similar broadcasts:"/>
@@ -1570,7 +1570,7 @@
 	</widget>
 	<widget source="Event" render="Label" backgroundColor="OE_Background" font="RegularBold;25" horizontalAlignment="right" position="435,150" size="165,45" transparent="1">
 	    <convert type="EventTime">Remaining</convert>
-	    <convert type="RemainingToText">InMinutes</convert>
+	    <convert type="RemainingToText"></convert>
 	</widget>
 	<widget name="timeline_text" selection="0" position="center,310" size="1820,46" backgroundColor="OE_NewBg2" transparent="0" font="RegularBold;28"/>
 	<widget source="Event" render="Label" font="Regular;28" backgroundColor="OE_Background" transparent="1" position="80,195" size="1760,105" zPosition="1">
@@ -1643,7 +1643,7 @@
 	</widget>
 	<widget source="Event" render="Label" backgroundColor="OE_Background" font="RegularBold;25" horizontalAlignment="right" position="435,150" size="165,45" transparent="1">
 	    <convert type="EventTime">Remaining</convert>
-	    <convert type="RemainingToText">InMinutes</convert>
+	    <convert type="RemainingToText"></convert>
 	</widget>
 	<widget name="timeline_text" selection="0" position="center,310" size="1820,46" backgroundColor="OE_NewBg2" transparent="0" font="RegularBold;28"/>
 	<widget source="Event" render="Label" font="Regular;28" backgroundColor="OE_Background" transparent="1" position="80,195" size="1760,105" zPosition="1">
