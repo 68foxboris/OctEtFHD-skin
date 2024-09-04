@@ -260,6 +260,7 @@
 		<panel name="TemplateWizard"/>
 		<panel name="TemplateRemoteControl"/>
 		<panel name="ButtonsInformation"/>
+		<ePixmap alphaTest="blend" pixmap="buttons/key_menu.png" position="25,945" size="64,43"/>
 		<widget name="text" conditional="text" font="RegularBold;26" horizontalAlignment="left" verticalAlignment="center" backgroundColor="OE_Background" foregroundColor="OE_Foreground" position="445,170" size="1420,90" transparent="1"/>
 		<widget name="label" conditional="label" backgroundColor="#0000fafa" position="445,275" size="1430,2" zPosition="-8"/>
 		<widget source="languages" render="Listbox" scrollbarMode="showOnDemand" scrollbarForegroundColor="blue_light" scrollbarBorderColor="blue_light" backgroundColor="OE_Background" position="445,280" size="1430,715" transparent="1">
@@ -733,10 +734,10 @@
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 		<!-- CryptoInfo -->
-		<widget source="session.CurrentService" render="PicCript" path="cript" position="470,965" size="98,31" alphaTest="blend" zPosition="3"/>
+		<widget source="session.CurrentService" render="PicCript" path="OctEtFHD/cript" position="470,965" size="98,31" alphaTest="blend" zPosition="3"/>
 		<panel name="Clock"/>
 		<widget source="session.CurrentService" render="PicEmu2" path="OctEtFHD/emu" position="540,965" size="98,31" transparent="1" alphaTest="blend" zPosition="3"/>
-		<widget source="session.CurrentService" render="Label" font="RegularBold;21" position="540,965" size="565,35" zPosition="50" backgroundColor="OE_ListBackground" transparent="1" noWrap="1">
+		<widget source="session.CurrentService" render="Label" font="RegularBold;21" position="660,965" size="450,35" zPosition="50" backgroundColor="OE_ListBackground" transparent="1" noWrap="1">
 			<convert type="CaidInfo2"/>
 		</widget>
 		 <!-- MSNWeather -->
@@ -2111,10 +2112,10 @@
 		<widget pixmap="colors/green_light.png" position="75,978" render="Progress" size="1345,8" source="session.CurrentService" transparent="1" zPosition="2">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<widget backgroundColor="OE_Background" font="RegularBold;30" foregroundColor="OE_Foreground" horizontalAlignment="left" position="90,924" render="Label" shadowColor="OE_Background" shadowOffset="-1,-1" size="135,45" source="session.CurrentService" transparent="1" verticalAlignment="center">
+		<widget backgroundColor="OE_Background" font="RegularBold;30" foregroundColor="OE_Foreground" horizontalAlignment="left" position="90,896" render="Label" shadowColor="OE_Background" shadowOffset="-1,-1" size="135,90" source="session.CurrentService" transparent="1" verticalAlignment="center">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<widget backgroundColor="OE_Background" font="RegularBold;30" foregroundColor="OE_Foreground" horizontalAlignment="right" position="1285,924" render="Label" size="135,45" source="session.CurrentService" transparent="1" verticalAlignment="center">
+		<widget backgroundColor="OE_Background" font="RegularBold;30" foregroundColor="OE_Foreground" horizontalAlignment="right" position="1285,920" render="Label" size="135,45" source="session.CurrentService" transparent="1" verticalAlignment="center">
 			<convert type="ServicePosition">Remaining</convert>
 		</widget>
 		<widget backgroundColor="OE_Background" font="RegularBold;45" horizontalAlignment="center" position="1580,910" render="Label" size="220,65" source="session.CurrentService" transparent="1" verticalAlignment="center">
@@ -3244,6 +3245,7 @@
 	<!-- ####### Subtitle Display ####### -->
 	<screen backgroundColor="OE_Background" flags="wfNoBorder" name="Standby" position="0,0" size="1920,1080" title="Standby"/>
 	<screen name="SubtitleDisplay" position="fill" zPosition="-1" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="message"/>
 	</screen>
 	<!-- ####### SUBSERVICES QUICK ZAP ####### -->
 	<screen name="SubservicesQuickzap" backgroundColor="transparent" flags="wfNoBorder" position="570,850" size="840,100" title="Subservices">
@@ -3385,22 +3387,23 @@
 		<eLabel backgroundColor="OE_Background" name="InfoBar" position="center,910" size="1780,125" zPosition="-11"/>
 		<eLabel backgroundColor="OE_NewBg" foregroundColor="OE_NewBg" position="1565,870" size="250,210" zPosition="-10"/>
 		<eLabel backgroundColor="green_light" position="1580,981" size="220,2" zPosition="-9"/>
-		<widget backgroundColor="OE_Background" font="RegularBold;34" horizontalAlignment="center" noWrap="1" position="225,918" render="Label" size="1060,56" source="session.CurrentService" transparent="1">
-			<convert type="ServiceName">Name</convert>
-		</widget>
-		<widget backgroundColor="OE_Background" font="RegularBold;30" foregroundColor="OE_Foreground" horizontalAlignment="right" position="1285,924" render="Label" size="135,45" source="session.CurrentService" transparent="1" verticalAlignment="center">
-			<convert type="ServicePosition">Remaining</convert>
-		</widget>
-		<widget backgroundColor="OE_Background" font="RegularBold;30" foregroundColor="OE_Foreground" horizontalAlignment="left" position="90,924" render="Label" size="135,45" source="session.CurrentService" transparent="1" verticalAlignment="center">
+		<widget backgroundColor="OE_Background" font="RegularBold;30" foregroundColor="OE_Foreground" position="80,896" render="Label" size="265,80" source="session.CurrentService" transparent="1" verticalAlignment="center">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
+		<widget backgroundColor="OE_Background" font="RegularBold;34" noWrap="1" position="650,918" render="Label" size="640,56" source="session.CurrentService" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget backgroundColor="OE_Background" font="RegularBold;30" foregroundColor="OE_Foreground" position="1295,896" render="Label" size="265,80" source="session.CurrentService" transparent="1" verticalAlignment="center">
+			<convert type="ServicePosition">Remaining</convert>
+		</widget>
+
 		<widget backgroundColor="OE_Background" font="RegularBold;45" horizontalAlignment="center" position="1580,910" render="Label" size="220,65" source="session.CurrentService" transparent="1" verticalAlignment="center">
 			<convert type="ServicePosition">Length</convert>
 		</widget>
-		<widget pixmap="colors/green_light.png" position="75,978" render="Progress" size="1345,8" source="session.CurrentService" transparent="1" zPosition="2">
+		<widget pixmap="colors/green_light.png" position="75,978" render="Progress" size="1475,8" source="session.CurrentService" transparent="1" zPosition="2">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<eLabel backgroundColor="OE_Accent1" foregroundColor="OE_Accent1" name="new eLabel" position="75,981" size="1345,2" zPosition="-1"/>
+		<eLabel backgroundColor="OE_Accent1" foregroundColor="OE_Accent1" name="new eLabel" position="75,981" size="1475,2" zPosition="-1"/>
 		<!-- Info -->
 		<ePixmap alphaTest="blend" pixmap="my_icons/format_off.png" position="1620,994" size="63,32" zPosition="1"/>
 		<widget alphaTest="blend" pixmap="my_icons/format_on.png" position="1620,994" render="Pixmap" size="63,32" source="session.CurrentService" zPosition="2">
