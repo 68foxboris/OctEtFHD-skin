@@ -1350,7 +1350,7 @@
 	</widget>
 	<widget source="Event" render="Label" backgroundColor="OE_Background" font="RegularBold;28" horizontalAlignment="right" position="435,153" size="165,40" transparent="1">
 	    <convert type="EventTime">Remaining</convert>
-	    <convert type="RemainingToText"></convert>
+	    <convert type="RemainingToText">InMinutes</convert>
 	</widget>
 	<widget source="Event" font="Regular;28" render="DRRunningText" options="movetype=running,startpoint=0,direction=top,steptime=100,startdelay=4000,wrap,always=0" backgroundColor="OE_Background" position="80,210" size="520,530" transparent="1">
 	    <convert type="EventName">ExtendedDescription</convert>
@@ -1435,7 +1435,7 @@
 	</widget>
 	<widget source="Event" render="Label" backgroundColor="OE_NewBg2" font="RegularBold;28" horizontalAlignment="right" position="440,240" size="160,40" transparent="1">
 	    <convert type="EventTime">Remaining</convert>
-	    <convert type="RemainingToText"></convert>
+	    <convert type="RemainingToText">InMinutes</convert>
 	</widget>
 	<widget name="list" itemHeight="50" CoolFont="RegularBold;25" CoolEventFont="RegularBold;25" CoolDayHPos="5" CoolDayPos="0" CoolDaySize="50" CoolTimeHPos="5" CoolTimePos="75" CoolTimeSize="75" CoolEventHPos="5" CoolEventPos="160" CoolEventSize="1100" CoolDayColor="blue_light" CoolTimeColor="white" CoolEventColor="green_light" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" CoolBackColor="OE_Background" CoolBackColorSel="OE_Selection" backgroundColor="OE_Background" foregroundColor="OE_Foreground" transparent="1" position="630,155" size="1200,750" zPosition="25"/>
 	<!-- Button -->
@@ -1479,7 +1479,7 @@
 	</widget>
 	<widget source="Event" render="Label" backgroundColor="OE_NewBg2" font="RegularBold;28" horizontalAlignment="right" position="440,240" size="160,40" transparent="1">
 	    <convert type="EventTime">Remaining</convert>
-	    <convert type="RemainingToText"></convert>
+	    <convert type="RemainingToText">InMinutes</convert>
 	</widget>
 	<widget name="timeline_now" position="0,210" zPosition="2" size="17,705" pixmap="extensions/timeline-now.png" alphaTest="blend"/>
 	<widget name="timeline_text" font="RegularBold;28" position="630,155" size="1200,45" transparent="0" backgroundColor="dark"/>
@@ -1521,7 +1521,7 @@
 	</widget>
 	<widget source="Event" render="Label" backgroundColor="OE_Background" font="RegularBold;28" horizontalAlignment="right" position="435,153" size="165,40" transparent="1">
 	    <convert type="EventTime">Remaining</convert>
-	    <convert type="RemainingToText"></convert>
+	    <convert type="RemainingToText">InMinutes</convert>
 	</widget>
 	<widget name="CoolShort" position="80,193" size="520,250" font="RegularBold;28" backgroundColor="OE_NewBg2" transparent="1" verticalAlignment="top"/>
 	<eLabel position="80,545" size="520,55" font="RegularBold;25" backgroundColor="OE_NewBg2" shadowColor="#000000" transparent="1" foregroundColor="blue_light" text="Similar broadcasts:"/>
@@ -1570,7 +1570,7 @@
 	</widget>
 	<widget source="Event" render="Label" backgroundColor="OE_Background" font="RegularBold;25" horizontalAlignment="right" position="435,150" size="165,45" transparent="1">
 	    <convert type="EventTime">Remaining</convert>
-	    <convert type="RemainingToText"></convert>
+	    <convert type="RemainingToText">InMinutes</convert>
 	</widget>
 	<widget name="timeline_text" selection="0" position="center,310" size="1820,46" backgroundColor="OE_NewBg2" transparent="0" font="RegularBold;28"/>
 	<widget source="Event" render="Label" font="Regular;28" backgroundColor="OE_Background" transparent="1" position="80,195" size="1760,105" zPosition="1">
@@ -1643,7 +1643,7 @@
 	</widget>
 	<widget source="Event" render="Label" backgroundColor="OE_Background" font="RegularBold;25" horizontalAlignment="right" position="435,150" size="165,45" transparent="1">
 	    <convert type="EventTime">Remaining</convert>
-	    <convert type="RemainingToText"></convert>
+	    <convert type="RemainingToText">InMinutes</convert>
 	</widget>
 	<widget name="timeline_text" selection="0" position="center,310" size="1820,46" backgroundColor="OE_NewBg2" transparent="0" font="RegularBold;28"/>
 	<widget source="Event" render="Label" font="Regular;28" backgroundColor="OE_Background" transparent="1" position="80,195" size="1760,105" zPosition="1">
@@ -3712,7 +3712,7 @@
 	<eLabel backgroundColor="OE_Background" position="30,center" size="1460,940" zPosition="-15"/>
 	<eLabel backgroundColor="OE_NewBg2" position="70,center" size="80,1080" zPosition="-11" verticalAlignment="center"/>
 	<eLabel backgroundColor="blue_light" position="170,130" size="1250,2" zPosition="-9"/>
-	<ePixmap alphaTest="blend" pixmap="colors/o_logo.png" position="75,80" size="75,75" transparent="1" zPosition="1"/>
+	<ePixmap alphaTest="blend" pixmap="my_icons/norhap_logo.png" position="75,95" size="75,75" transparent="1" zPosition="1"/>
 	<!-- Widget -->
 	<widget source="Titel" render="Label" font="RegularBold;30" backgroundColor="OE_Background" position="170,73" size="800,50" transparent="1"/>
 	<widget source="Titel2" render="Label" font="RegularBold;30" backgroundColor="OE_Background" horizontalAlignment="left" position="975,73" size="0,0" transparent="1"/>
@@ -3746,7 +3746,7 @@
   <screen name="CityPanel" title="Select a city" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
 	<eLabel backgroundColor="OE_Background" position="30,center" size="1460,940" zPosition="-15"/>
 	<eLabel backgroundColor="OE_NewBg2" position="70,center" size="80,1080" zPosition="-11" verticalAlignment="center"/>
-	<ePixmap alphaTest="blend" pixmap="colors/o_logo.png" position="75,80" size="75,75" transparent="1" zPosition="1"/>
+	<ePixmap alphaTest="blend" pixmap="my_icons/norhap_logo.png" position="75,95" size="75,75" transparent="1" zPosition="1"/>
 	<eLabel backgroundColor="blue_light" position="170,130" size="1250,2" zPosition="-9"/>
 	<!-- Widget -->
 	<widget source="Title" render="Label" font="RegularBold;30" backgroundColor="OE_Background" position="170,73" size="1250,50" transparent="1"/>
@@ -3770,7 +3770,7 @@
 	<eLabel backgroundColor="OE_Background" position="30,center" size="1460,940" zPosition="-15"/>
 	<eLabel backgroundColor="OE_NewBg2" position="70,center" size="80,1080" zPosition="-11" verticalAlignment="center"/>
 	<eLabel backgroundColor="blue_light" position="170,130" size="1250,2" zPosition="-9"/>
-	<ePixmap alphaTest="blend" pixmap="colors/o_logo.png" position="75,80" size="75,75" transparent="1" zPosition="1"/>
+	<ePixmap alphaTest="blend" pixmap="my_icons/norhap_logo.png" position="75,95" size="75,75" transparent="1" zPosition="1"/>
 	<!-- Widget -->
 	<widget source="Title" render="Label" font="RegularBold;30" backgroundColor="OE_Background" position="170,73" size="1250,50" transparent="1"/>
 	<widget name="Mlist" font="RegularBold;32" itemHeight="145" scrollbarForegroundColor="blue_light" scrollbarBorderColor="blue_light" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="OE_Background" foregroundColor="OE_Foreground" position="170,165" size="1250,725" transparent="1"/>
@@ -3792,7 +3792,7 @@
 	<eLabel backgroundColor="OE_Background" position="30,center" size="1460,940" zPosition="-15"/>
 	<eLabel backgroundColor="OE_NewBg2" position="70,center" size="80,1080" zPosition="-11" verticalAlignment="center"/>
 	<eLabel backgroundColor="blue_light" position="170,130" size="1250,2" zPosition="-9"/>
-	<ePixmap alphaTest="blend" pixmap="colors/o_logo.png" position="75,80" size="75,75" transparent="1" zPosition="1"/>
+	<ePixmap alphaTest="blend" pixmap="my_icons/norhap_logo.png" position="75,95" size="75,75" transparent="1" zPosition="1"/>
 	<!-- Widget -->
 	<widget source="Title" render="Label" font="RegularBold;30" backgroundColor="OE_Background" position="170,73" size="1250,50" transparent="1"/>
 	<widget name="Mlist" font="RegularBold;32" itemHeight="145" scrollbarMode="showOnDemand" scrollbarForegroundColor="blue_light" scrollbarBorderColor="blue_light" enableWrapAround="1" backgroundColor="OE_Background" position="170,165" size="1250,725" transparent="1"/>
@@ -3804,7 +3804,7 @@
 	<eLabel backgroundColor="OE_Background" position="30,center" size="1460,940" zPosition="-15"/>
 	<eLabel backgroundColor="OE_NewBg2" position="70,center" size="80,1080" zPosition="-11" verticalAlignment="center"/>
 	<eLabel backgroundColor="blue_light" position="170,130" size="1250,2" zPosition="-9"/>
-	<ePixmap alphaTest="blend" pixmap="colors/o_logo.png" position="75,80" size="75,75" transparent="1" zPosition="1"/>
+	<ePixmap alphaTest="blend" pixmap="my_icons/norhap_logo.png" position="75,95" size="75,75" transparent="1" zPosition="1"/>
 	<!-- Widget -->
 	<eLabel text="SlideShow Settings" font="RegularBold;30" backgroundColor="OE_Background" position="170,73" size="1250,50" transparent="1"/>
 	<widget name="Mlist" itemHeight="50" font="RegularBold;25" valueFont="Regular;28" backgroundColorSelected="OE_Selection" scrollbarMode="showOnDemand" backgroundColor="OE_Background" foregroundColor="OE_Foreground" position="170,165" size="1250,750" transparent="1"/>
@@ -5698,7 +5698,7 @@
 	<widget source="list" render="Listbox" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="OE_Background" position="170,260" size="1250,648" transparent="1">
 	    <convert type="TemplatedMultiContent">
 			   {"template": [
-		   MultiContentEntryPixmapAlphaTest(pos=(0,0), flags=BT_SCALE, size=(150,108), png=2), # Thumbnail
+		   MultiContentEntryPixmapAlphaTest(pos=(0,0), size=(150,108), png=2), # Thumbnail
 		   MultiContentEntryText(pos=(165,1), size=(1000,78), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text=3), # Title
 		   MultiContentEntryText(pos=(180, 73), size=(400,34), font=1, flags=RT_HALIGN_LEFT, text=4), # Views
 		   MultiContentEntryText(pos=(580,73), size=(400,34), font=1, flags=RT_HALIGN_LEFT, text=5), # Duration
@@ -6103,7 +6103,7 @@
 		</convert>
 	</widget>
 	<!-- Buttons-->
-	<ePixmap alphaTest="blend" pixmap="colors/o_logo.png" position="72,55" size="75,75" transparent="1" zPosition="1"/>
+	<ePixmap alphaTest="blend" pixmap="my_icons/norhap_logo.png" position="72,70" size="75,75" transparent="1" zPosition="1"/>
 	<eLabel backgroundColor="blue_light" position="170,945" size="1610,2" zPosition="-9"/>
 	<ePixmap alphaTest="blend" pixmap="buttons/key_red.png" position="170,960" size="40,40"/>
 	<ePixmap alphaTest="blend" pixmap="buttons/key_green.png" position="500,960" size="40,40"/>
@@ -6151,7 +6151,7 @@
 		</convert>
 	</widget>
 	<!-- Buttons-->
-	<ePixmap alphaTest="blend" pixmap="colors/o_logo.png" position="72,55" size="75,75" transparent="1" zPosition="1"/>
+	<ePixmap alphaTest="blend" pixmap="my_icons/norhap_logo.png" position="72,70" size="75,75" transparent="1" zPosition="1"/>
 	<eLabel backgroundColor="blue_light" position="170,945" size="1610,2" zPosition="-9"/>
 	<ePixmap alphaTest="blend" pixmap="buttons/key_red.png" position="170,960" size="40,40"/>
 	<ePixmap alphaTest="blend" pixmap="buttons/key_green.png" position="500,960" size="40,40"/>
@@ -6310,9 +6310,10 @@
 	<panel name="StanDardScreen"/>
 	<panel name="TemplatePip"/>
 	<ePixmap alphaTest="blend" pixmap="buttons/key_exit.png" position="18,1035" size="64,43"/>
-	<widget name="list" itemHeight="45" position="26,145" size="1250,815" scrollbarMode="showOnDemand" scrollbarForegroundColor="blue_light" scrollbarBorderColor="blue_light" font="RegularBold;25" transparent="1"/>
+	<widget name="list" itemHeight="45" position="26,145" size="1250,760" scrollbarMode="showOnDemand" scrollbarForegroundColor="blue_light" scrollbarBorderColor="blue_light" font="RegularBold;25" transparent="1"/>
+	<widget source="xmlfiles" render="Label" conditional="xmlfiles" position="145,1035" zPosition="12" size="165,43" backgroundColor="key_back" font="Regular;20" horizontalAlignment="center" verticalAlignment="center" foregroundColor="key_text"/>
 	<widget name="status" position="1290,900" size="620,215"  font="RegularBold;25" horizontalAlignment="left" backgroundColor="OE_NewBg2" transparent="1" zPosition="2"/>
-		<widget name="managerlistchannels" conditional="managerlistchannels" position="1290,575" size="620,130" font="RegularBold;24" foregroundColor="#00eb3e10" horizontalAlignment="left" backgroundColor="OE_NewBg2" transparent="1"/>
+	<widget name="managerlistchannels" conditional="managerlistchannels" position="1290,575" size="620,130" font="RegularBold;24" foregroundColor="#00eb3e10" horizontalAlignment="left" backgroundColor="OE_NewBg2" transparent="1"/>
   </screen>
 	<!-- PARENTAL CONTROL IPToSAT -->
 	<screen name="PinInputPopupIPToSAT" title="Change pin code" backgroundColor="OE_NewBg2" flags="wfNoBorder" position="0,0" size="1920,1080">
