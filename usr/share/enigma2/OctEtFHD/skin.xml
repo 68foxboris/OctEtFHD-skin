@@ -360,10 +360,10 @@
 		<pixmap name="menu_off" filename="OctEtFHD/icons/menu_off.png"/>
 	</switchpixmap>
 	<!-- RESTART GUI -->
-	<screen name="QuitMainloopScreen" position="fill" backgroundColor="OE_NewBg2" flags="wfNoBorder">
+	<screen name="QuitMainloopScreen" position="fill" backgroundColor="#002c445e" flags="wfNoBorder">
 		<ePixmap pixmap="icons/input_info.png" position="910,315" size="80,80" alphaTest="blend"/>
 		<ePixmap alphaTest="blend" pixmap="my_icons/norhap_logo150x90.png" position="865,150" size="150,90" transparent="1" zPosition="10"/>
-		<widget name="text" position="500,420" size="920,250" zPosition="2" transparent="1" font="RegularBold;25" horizontalAlignment="center" verticalAlignment="top"/>
+		<widget name="text" position="500,420" size="920,250" zPosition="2" transparent="1" font="RegularBold;25" backgroundColor="#002c445e" horizontalAlignment="center" verticalAlignment="top"/>
 	</screen>
 	<!-- MENU -->
 	<screen name="Menu" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080" title="Main menu" transparent="0">
@@ -427,7 +427,7 @@
 	</screen>
 	<!-- INFOBAR -->
 	<screen name="InfoBar" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080" title="InfoBar">
-		<!--panel name="poster_firstinfobar"/-->
+		<panel name="poster_firstinfobar"/>
 		<eLabel backgroundColor="OE_ListBackground" name="InfoBar" position="15,852" size="1865,215" zPosition="-11"/>
 		<eLabel backgroundColor="blue_light" name="InfoBar" position="15,850" size="1865,2" zPosition="-11"/>
 		<eLabel backgroundColor="blue_light" name="InfoBar" position="15,850" size="2,215" zPosition="-11"/>
@@ -601,7 +601,7 @@
 	</screen>
 	<!-- SECOND INFOBAR -->
 	<screen name="SecondInfoBar" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080" title="InfoBar">
-		<!--panel name="poster_secondinfobar"/-->
+		<panel name="poster_secondinfobar"/>
 		<panel name="SecondInfobarButtons"/>
 		<eLabel backgroundColor="OE_ListBackground" name="InfoBar" position="10,160" size="1690,895" zPosition="-22"/>
 		<eLabel backgroundColor="blue_light" position="10,158" size="1690,2" zPosition="-22"/>
@@ -1060,7 +1060,7 @@
 	</screen>
 	<!-- CHANNELSELECTION -->
 	<screen name="ChannelSelection" position="0,0" size="1920,1080" backgroundColor="transparent" title="Channel Selection" flags="wfNoBorder">
-		<!--panel name="poster_channelselection"/-->
+		<panel name="poster_channelselection"/>
 		<eLabel backgroundColor="OE_Background" position="10,45" size="1895,1000" zPosition="-15"/>
 		<eLabel backgroundColor="blue_light" position="570,145" size="1330,2" zPosition="-9" foregroundColor="un5678a4"/>
 		<eLabel backgroundColor="blue_light" position="570,930" size="1330,2" zPosition="-9"/>
@@ -1097,7 +1097,7 @@
 		<widget backgroundColor="blue_light" pixmap="colors/green_light.png" position="50,385" render="Progress" size="500,5" source="ServiceEvent" transparent="0" zPosition="1">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget backgroundColor="OE_NewBg2" font="RegularBold;26" position="50,390" options="movetype=running,startpoint=0,direction=top,steptime=100,startdelay=4000,wrap,always=0" render="DRRunningText" size="500,330" source="ServiceEvent" transparent="1">
+		<widget backgroundColor="OE_NewBg2" font="RegularBold;24" position="50,390" options="movetype=running,startpoint=0,direction=top,steptime=100,startdelay=4000,wrap,always=0" render="DRRunningText" size="500,170" source="ServiceEvent" transparent="1">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 		<widget backgroundColor="blue_light" foregroundColor="blue_light" position="50,723" render="Progress" size="500,4" source="Event" transparent="0" zPosition="1">
@@ -2122,6 +2122,7 @@
 		<!-- MOVIEPLAYER NO CHECK-->
 	<screen name="MoviePlayer" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080" title="InfoBar">
 		<panel name="PVRState"/>
+		<panel name="poster_firstinfobar"/>
 		<eLabel backgroundColor="OE_Background" name="InfoBar" position="center,910" size="1780,125" zPosition="-11"/>
 		<eLabel backgroundColor="OE_NewBg" foregroundColor="OE_NewBg" position="1565,870" size="250,210" zPosition="-10"/>
 		<eLabel backgroundColor="green_light" position="1580,981" size="220,2" zPosition="-9"/>
@@ -2190,45 +2191,50 @@
 		<panel name="Clock"/>
 	</screen>
 	<!-- MOVIESELECTION -->
-	<screen name="MovieSelection" title="Select a movie" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
-		<!--panel name="poster_movieselection"/-->
-		<panel name="FrameClock"/>
-		<panel name="TemplateFrame"/>
+	<screen name="MovieSelection" position="0,0" size="1920,1080" title="EMCSelection">
+		<panel name="poster_movieselection"/>
+		<ePixmap alphaTest="blend" pixmap="my_icons/norhap_logo.png" position="470,10" size="75,75" transparent="1" zPosition="1"/>
+		<eLabel backgroundColor="OE_NewBg2" foregroundColor="OE_Background" position="45,center" size="1875,940" zPosition="-15"/>
+		<eLabel backgroundColor="#002c445e" foregroundColor="OE_Background" position="0,0" size="1920,1080" zPosition="-16"/>
+		<eLabel text="Movie Selection" position="450,0" size="1465,65" backgroundColor="#002c445e" foregroundColor="green_light" horizontalAlignment="center" verticalAlignment="center" zPosition="5" font="RegularBold;40" transparent="1"/>
 		<widget source="Title" render="Label" font="RegularBold;30" backgroundColor="OE_Background" position="465,60" size="1345,90" horizontalAlignment="center" verticalAlignment="center" transparent="1"/>
-		<eLabel backgroundColor="OE_NewBg2" position="15,center" size="450,1080" zPosition="0" verticalAlignment="center"/>
-		<eLabel backgroundColor="blue_light" position="465,142" size="1445,2" zPosition="2" foregroundColor="un5678a4"/>
-		<eLabel backgroundColor="blue_light" position="465,930" size="1445,2" zPosition="-9"/>
-		<eLabel backgroundColor="blue_light" position="30,930" size="420,2" zPosition="2"/>
+		<eLabel backgroundColor="OE_NewBg2" position="0,center" size="445,1080" zPosition="0"/>
+		<eLabel backgroundColor="OE_NewBg2" position="445,0" size="5,70" zPosition="0"/>
+		<eLabel backgroundColor="blue_light" position="450,158" size="1455,2" zPosition="2"/>
+		<eLabel backgroundColor="blue_light" position="450,910" size="1455,2" zPosition="10"/>
+		<eLabel backgroundColor="blue_light" position="0,910" size="450,2" zPosition="2"/>
+		<eLabel backgroundColor="blue_light" position="450,160" size="2,752" zPosition="2"/>
+		<eLabel backgroundColor="#002c445e" position="452,160" size="13,752" zPosition="2"/>
 		<widget name="chosenletter" position="425,165" size="40,40" font="RegularBold;30" backgroundColor="OE_NewBg2" foregroundColor="#0000fafa" transparent="1" zPosition="1"/>
-		<widget name="list" position="465,160" size="1440,750" backgroundColor="black" scrollbarMode="showOnDemand" scrollbarForegroundColor="blue_light" scrollbarBorderColor="blue_light" transparent="0"/>
-		<widget backgroundColor="OE_Background" font="RegularBold;26" foregroundColor="green_light" horizontalAlignment="left" position="30,885" size="180,45" render="Label" source="Service" transparent="1" zPosition="1">
+		<widget name="list" position="465,160" size="1440,750" backgroundColor="#002c445e" scrollbarMode="showOnDemand" scrollbarForegroundColor="blue_light" scrollbarBorderColor="blue_light" transparent="0"/>
+		<widget backgroundColor="OE_Background" font="RegularBold;26" foregroundColor="green_light" horizontalAlignment="left" position="15,880" size="180,45" render="Label" source="Service" transparent="1" zPosition="1">
 			<convert type="ServiceTime">Duration</convert>
 			<convert type="ClockToText">AsLength</convert>
 		</widget>
-		<widget backgroundColor="OE_Background" font="RegularBold;26" foregroundColor="green_light" horizontalAlignment="left" position="215,885" render="Label" size="200,45" source="Service" transparent="1" zPosition="1">
+		<widget backgroundColor="OE_Background" font="RegularBold;26" foregroundColor="green_light" horizontalAlignment="left" position="215,880" render="Label" size="200,45" source="Service" transparent="1" zPosition="1">
 			<convert type="MovieInfo">FileSize</convert>
 		</widget>
-		<widget name="TrashcanSize" position="30,930" size="305,50" font="RegularBold;22" backgroundColor="OE_NewBg2" transparent="1" zPosition="1"/>
-		<widget name="freeDiskSpace" position="30,980" size="440,90" font="RegularBold;22" backgroundColor="OE_NewBg2" transparent="1" zPosition="1"/>
-		<widget name="movie_sort" pixmaps="icons/az.png,icons/newtop.png,icons/shuffle.png,icons/za.png,icons/oldtop.png,icons/faz.png,icons/fza.png,icons/default.png" position="370,950" zPosition="10" size="35,20" transparent="1" alphaTest="on"/>
-		<widget name="movie_off" pixmaps="icons/ask.png,icons/movielist.png,icons/quit.png,icons/pause.png,icons/playlist.png,icons/playlistquit.png,icons/loop.png,icons/rep.png" position="420,950" zPosition="10" size="35,20" transparent="1" alphaTest="on"/>
-		<widget backgroundColor="OE_Background" font="RegularBold;26" position="30,420" options="movetype=running,startpoint=0,direction=top,steptime=100,startdelay=4000,wrap,always=0" render="DRRunningText" size="440,450" source="Service" transparent="1" zPosition="1">
+		<widget name="TrashcanSize" position="15,930" size="310,50" font="RegularBold;22" backgroundColor="OE_NewBg2" transparent="1" zPosition="1"/>
+		<widget name="freeDiskSpace" position="15,1000" size="435,90" font="RegularBold;22" backgroundColor="OE_NewBg2" transparent="0" zPosition="1"/>
+		<widget name="movie_sort" pixmaps="icons/az.png,icons/newtop.png,icons/shuffle.png,icons/za.png,icons/oldtop.png,icons/faz.png,icons/fza.png" position="450,952" size="45,25" transparent="1" alphaTest="on"/>
+		<widget name="movie_off" pixmaps="icons/ask.png,icons/movielist.png,icons/quit.png,icons/pause.png,icons/playlist.png,icons/playlistquit.png,icons/loop.png,icons/rep.png" position="505,952" zPosition="10" size="45,25" transparent="1" alphaTest="on"/>
+		<widget backgroundColor="OE_Background" font="RegularBold;24" position="15,420" options="movetype=running,startpoint=0,direction=top,steptime=100,startdelay=4000,wrap,always=0" render="DRRunningText" size="435,450" source="Service" transparent="1" zPosition="1">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 		<widget name="DescriptionBorder" position="0,0" size="0,0"/>
-		<widget name="waitingtext" position="950,145" size="600,35" font="RegularBold;26" foregroundColor="#0000fafa" backgroundColor="black" zPosition="1"/>
+		<widget name="waitingtext" position="950,175" size="600,35" font="RegularBold;26" foregroundColor="#0000fafa" backgroundColor="#002c445e" zPosition="1"/>
 		<!-- Button -->
-		<ePixmap alphaTest="blend" pixmap="buttons/key_menu.png" position="465,955" size="64,43"/>
-		<ePixmap alphaTest="blend" pixmap="buttons/key_info.png" position="525,955" size="64,43"/>
-		<ePixmap alphaTest="blend" pixmap="buttons/key_help.png" position="585,955" size="64,43"/>
-		<ePixmap alphaTest="blend" pixmap="buttons/key_red.png" position="690,955" size="40,40"/>
-		<ePixmap alphaTest="blend" pixmap="buttons/key_green.png" position="970,955" size="40,40"/>
-		<ePixmap alphaTest="blend" pixmap="buttons/key_yellow.png" position="1260,955" size="40,40"/>
-		<ePixmap alphaTest="blend" pixmap="buttons/key_blue.png" position="1550,955" size="40,40"/>
-		<widget source="key_red" render="Label" backgroundColor="OE_Background" font="RegularBold;22" horizontalAlignment="left" verticalAlignment="center" position="735,935" size="250,85" transparent="1" zPosition="1"/>
-		<widget source="key_green" render="Label" backgroundColor="OE_Background" font="RegularBold;22" horizontalAlignment="left" verticalAlignment="center" position="1015,935" size="250,85" transparent="1" zPosition="1"/>
-		<widget source="key_yellow" render="Label" backgroundColor="OE_Background" font="RegularBold;22" horizontalAlignment="left" verticalAlignment="center" position="1305,935" size="250,85" transparent="1" zPosition="1"/>
-		<widget source="key_blue" render="Label" backgroundColor="OE_Background" font="RegularBold;22" horizontalAlignment="left" verticalAlignment="center" position="1595,935" size="310,85" transparent="1" zPosition="1"/>
+		<ePixmap alphaTest="blend" pixmap="buttons/key_menu.png" position="565,940" size="64,43"/>
+		<ePixmap alphaTest="blend" pixmap="buttons/key_info.png" position="625,940" size="64,43"/>
+		<ePixmap alphaTest="blend" pixmap="buttons/key_help.png" position="685,940" size="64,43"/>
+		<ePixmap alphaTest="blend" pixmap="buttons/key_red.png" position="770,940" size="40,40"/>
+		<ePixmap alphaTest="blend" pixmap="buttons/key_green.png" position="1050,940" size="40,40"/>
+		<ePixmap alphaTest="blend" pixmap="buttons/key_yellow.png" position="1340,940" size="40,40"/>
+		<ePixmap alphaTest="blend" pixmap="buttons/key_blue.png" position="1630,940" size="40,40"/>
+		<widget name="key_red" backgroundColor="OE_NewBg2" font="RegularBold;22" horizontalAlignment="left" verticalAlignment="center" position="815,920" size="250,85" transparent="1" zPosition="1"/>
+		<widget name="key_green" backgroundColor="OE_NewBg2" font="RegularBold;22" horizontalAlignment="left" verticalAlignment="center" position="1095,920" size="250,85" transparent="1" zPosition="1"/>
+		<widget name="key_yellow" backgroundColor="OE_NewBg2" font="RegularBold;22" horizontalAlignment="left" verticalAlignment="center" position="1385,920" size="250,85" transparent="1" zPosition="1"/>
+		<widget name="key_blue" backgroundColor="OE_NewBg2" font="RegularBold;22" horizontalAlignment="left" verticalAlignment="center" position="1675,920" size="310,85" transparent="1" zPosition="1"/>
 	</screen>
 	<!-- MOVIESELECTIONSLIM -->
 	<screen name="MovieSelectionSlim" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080" transparent="0">
@@ -2315,39 +2321,39 @@
 		<panel name="StanDardScreen"/>
 		<panel name="TemplatePip"/>
 		<widget name="InfoText" position="1290,575" size="620,635" font="RegularBold;25" horizontalAlignment="left" backgroundColor="OE_NewBg2" transparent="1" zPosition="2"/>
-		<widget name="Adaptertext" backgroundColor="OE_Background" font="RegularBold;32" position="170,175" size="400,45" transparent="1" zPosition="1"/>
-		<widget name="Adapter" backgroundColor="OE_Background" font="RegularBold;32" foregroundColor="OE_Foreground" foregroundColors="#8c8c93,#f23d21,#1cff1c" position="170,225" size="400,45" transparent="1" zPosition="1"/>
-		<widget name="AdapterInfo_OK" pixmap="extensions/lock_on.png" alphaTest="blend" position="590,230" size="35,35" zPosition="2"/>
-		<widget name="AdapterInfo_Text" backgroundColor="OE_Background" font="RegularBold;32" foregroundColor="OE_Foreground" foregroundColors="darkgrey,grey,white" horizontalAlignment="right" position="640,225" size="280,45" transparent="1" verticalAlignment="center" zPosition="2"/>
-		<widget name="AdapterInfo" pixmaps="extensions/lan-seloff.png,extensions/lan-sel.png" alphaTest="blend" backgroundColor="OE_Background" position="640,225" size="350,45" zPosition="1"/>
-		<widget name="Networktext" backgroundColor="OE_Background" font="RegularBold;32" position="170,325" size="400,45" transparent="1" zPosition="1"/>
-		<widget name="Network" backgroundColor="OE_Background" font="RegularBold;32" foregroundColors="#8c8c93,#f23d21,#1cff1c" position="170,375" size="400,45" transparent="1" zPosition="1"/>
-		<widget name="NetworkInfo_Check" backgroundColor="OE_Background" pixmaps="extensions/lock_on.png,extensions/lock_off.png" alphaTest="blend" position="590,380" size="35,35" zPosition="2"/>
-		<widget name="NetworkInfo_Text" backgroundColor="OE_Background" font="RegularBold;32" foregroundColors="darkgrey,grey,white" horizontalAlignment="right" position="640,375" size="280,45" transparent="1" verticalAlignment="center" zPosition="2"/>
-		<widget name="NetworkInfo" pixmaps="extensions/lan-seloff.png,extensions/lan-sel.png" alphaTest="blend" backgroundColor="OE_Background" position="640,375" size="350,45" zPosition="1"/>
-		<widget name="Dhcptext" backgroundColor="OE_Background" font="RegularBold;32" foregroundColor="OE_Foreground" position="170,475" size="400,45" transparent="1" zPosition="1"/>
-		<widget name="Dhcp" backgroundColor="OE_Background" font="RegularBold;32" foregroundColor="OE_Foreground" foregroundColors="#8c8c93,#f23d21,#1cff1c" position="170,525" size="400,45" transparent="1" zPosition="1"/>
-		<widget name="DhcpInfo_Check" backgroundColor="OE_Background" pixmaps="extensions/lock_on.png,extensions/lock_off.png" alphaTest="blend" position="590,530" size="35,35" zPosition="2"/>
-		<widget name="DhcpInfo_Text" backgroundColor="OE_Background" font="RegularBold;32" foregroundColors="darkgrey,grey,white" horizontalAlignment="right" position="640,525" size="280,45" transparent="1" verticalAlignment="center" zPosition="2"/>
-		<widget name="DhcpInfo" backgroundColor="OE_Background" pixmaps="extensions/lan-seloff.png,extensions/lan-sel.png" alphaTest="blend" position="640,525" size="350,45" zPosition="1"/>
-		<widget name="IPtext" backgroundColor="OE_Background" font="RegularBold;32" position="170,625" size="400,45" transparent="1" zPosition="1"/>
-		<widget name="IP" backgroundColor="OE_Background" font="RegularBold;32" foregroundColors="#8c8c93,#f23d21,#1cff1c" position="170,675" size="400,45" transparent="1" zPosition="1"/>
-		<widget name="IPInfo_Check" backgroundColor="OE_Background" pixmaps="extensions/lock_on.png,extensions/lock_off.png" alphaTest="blend" position="590,680" size="35,35" zPosition="2"/>
-		<widget name="IPInfo_Text" backgroundColor="OE_Background" font="RegularBold;32" foregroundColors="darkgrey,grey,white" horizontalAlignment="right" position="640,675" size="280,45" transparent="1" verticalAlignment="center" zPosition="2"/>
-		<widget name="IPInfo" backgroundColor="OE_Background" pixmaps="extensions/lan-seloff.png,extensions/lan-sel.png" alphaTest="blend" position="640,675" size="350,45" zPosition="1"/>
-		<widget name="DNStext" backgroundColor="OE_Background" font="RegularBold;32" position="170,775" size="400,45" transparent="1" zPosition="1"/>
-		<widget name="DNS" backgroundColor="OE_Background" font="RegularBold;32" foregroundColors="#8c8c93,#f23d21,#1cff1c" position="170,825" size="400,45" transparent="1" zPosition="1"/>
-		<widget name="DNSInfo_Check" backgroundColor="OE_Background" pixmaps="extensions/lock_on.png,extensions/lock_off.png" alphaTest="blend" position="590,830" size="35,35" zPosition="2"/>
-		<widget name="DNSInfo_Text" backgroundColor="OE_Background" font="RegularBold;32" foregroundColors="darkgrey,grey,white" horizontalAlignment="right" position="640,825" size="280,45" transparent="1" verticalAlignment="center" zPosition="2"/>
-		<widget name="DNSInfo" backgroundColor="OE_Background" pixmaps="extensions/lan-seloff.png,extensions/lan-sel.png" alphaTest="blend" position="640,825" size="350,45" zPosition="1"/>
-		<widget name="EditSettings_Text" backgroundColor="OE_Background" font="RegularBold;32" foregroundColors="darkgrey,grey,white" horizontalAlignment="right" position="470,888" size="450,45" transparent="1" verticalAlignment="center" zPosition="2"/>
-		<widget name="EditSettingsButton" backgroundColor="OE_Background" pixmaps="extensions/lan-seloff.png,extensions/lan-sel300.png" alphaTest="blend" position="440,888" size="550,45" zPosition="2"/>
+		<widget name="Adaptertext" backgroundColor="OE_Background" font="RegularBold;32" position="170,175" size="400,40" transparent="1" zPosition="1"/>
+		<widget name="Adapter" backgroundColor="OE_Background" font="RegularBold;32" foregroundColor="OE_Foreground" foregroundColors="#8c8c93,#f23d21,#1cff1c" position="170,225" size="400,40" transparent="1" zPosition="1"/>
+		<widget name="AdapterInfo_OK" pixmap="extensions/lock_on.png" alphaTest="blend" position="590,223" size="35,35" zPosition="2"/>
+		<widget name="AdapterInfo_Text" backgroundColor="OE_Background" font="RegularBold;32" foregroundColor="OE_Foreground" foregroundColors="darkgrey,#00e5e619,#0000fafa" horizontalAlignment="right" position="640,225" size="280,40" transparent="1" verticalAlignment="center" zPosition="2"/>
+		<widget name="AdapterInfo" pixmaps="extensions/lan-seloff.png,extensions/lan-sel.png" alphaTest="blend" backgroundColor="OE_Background" position="640,225" size="350,40" zPosition="1"/>
+		<widget name="Networktext" backgroundColor="OE_Background" font="RegularBold;32" position="170,325" size="400,40" transparent="1" zPosition="1"/>
+		<widget name="Network" backgroundColor="OE_Background" font="RegularBold;32" foregroundColors="#8c8c93,#f23d21,#1cff1c" position="170,375" size="400,40" transparent="1" zPosition="1"/>
+		<widget name="NetworkInfo_Check" backgroundColor="OE_Background" pixmaps="extensions/lock_on.png,extensions/lock_off.png" alphaTest="blend" position="590,373" size="35,35" zPosition="2"/>
+		<widget name="NetworkInfo_Text" backgroundColor="OE_Background" font="RegularBold;32" foregroundColors="darkgrey,#00e5e619,#0000fafa" horizontalAlignment="right" position="640,375" size="280,40" transparent="1" verticalAlignment="center" zPosition="2"/>
+		<widget name="NetworkInfo" pixmaps="extensions/lan-seloff.png,extensions/lan-sel.png" alphaTest="blend" backgroundColor="OE_Background" position="640,375" size="350,40" zPosition="1"/>
+		<widget name="Dhcptext" backgroundColor="OE_Background" font="RegularBold;32" foregroundColor="OE_Foreground" position="170,475" size="400,40" transparent="1" zPosition="1"/>
+		<widget name="Dhcp" backgroundColor="OE_Background" font="RegularBold;32" foregroundColor="OE_Foreground" foregroundColors="#8c8c93,#f23d21,#1cff1c" position="170,525" size="400,40" transparent="1" zPosition="1"/>
+		<widget name="DhcpInfo_Check" backgroundColor="OE_Background" pixmaps="extensions/lock_on.png,extensions/lock_off.png" alphaTest="blend" position="590,523" size="35,35" zPosition="2"/>
+		<widget name="DhcpInfo_Text" backgroundColor="OE_Background" font="RegularBold;32" foregroundColors="darkgrey,#00e5e619,#0000fafa" horizontalAlignment="right" position="640,525" size="280,40" transparent="1" verticalAlignment="center" zPosition="2"/>
+		<widget name="DhcpInfo" backgroundColor="OE_Background" pixmaps="extensions/lan-seloff.png,extensions/lan-sel.png" alphaTest="blend" position="640,525" size="350,40" zPosition="1"/>
+		<widget name="IPtext" backgroundColor="OE_Background" font="RegularBold;32" position="170,625" size="400,40" transparent="1" zPosition="1"/>
+		<widget name="IP" backgroundColor="OE_Background" font="RegularBold;32" foregroundColors="#8c8c93,#f23d21,#1cff1c" position="170,675" size="400,40" transparent="1" zPosition="1"/>
+		<widget name="IPInfo_Check" backgroundColor="OE_Background" pixmaps="extensions/lock_on.png,extensions/lock_off.png" alphaTest="blend" position="590,673" size="35,35" zPosition="2"/>
+		<widget name="IPInfo_Text" backgroundColor="OE_Background" font="RegularBold;32" foregroundColors="darkgrey,#00e5e619,#0000fafa" horizontalAlignment="right" position="640,675" size="280,40" transparent="1" verticalAlignment="center" zPosition="2"/>
+		<widget name="IPInfo" backgroundColor="OE_Background" pixmaps="extensions/lan-seloff.png,extensions/lan-sel.png" alphaTest="blend" position="640,675" size="350,40" zPosition="1"/>
+		<widget name="DNStext" backgroundColor="OE_Background" font="RegularBold;32" position="170,775" size="400,40" transparent="1" zPosition="1"/>
+		<widget name="DNS" backgroundColor="OE_Background" font="RegularBold;32" foregroundColors="#8c8c93,#f23d21,#1cff1c" position="170,825" size="400,40" transparent="1" zPosition="1"/>
+		<widget name="DNSInfo_Check" backgroundColor="OE_Background" pixmaps="extensions/lock_on.png,extensions/lock_off.png" alphaTest="blend" position="590,823" size="35,35" zPosition="2"/>
+		<widget name="DNSInfo_Text" backgroundColor="OE_Background" font="RegularBold;32" foregroundColors="darkgrey,#00e5e619,#0000fafa" horizontalAlignment="right" position="640,825" size="280,40" transparent="1" verticalAlignment="center" zPosition="2"/>
+		<widget name="DNSInfo" backgroundColor="OE_Background" pixmaps="extensions/lan-seloff.png,extensions/lan-sel.png" alphaTest="blend" position="640,825" size="350,40" zPosition="1"/>
+		<widget name="EditSettings_Text" backgroundColor="OE_Background" font="RegularBold;32" foregroundColors="darkgrey,#00e5e619,#0000fafa" horizontalAlignment="right" position="470,888" size="450,40" transparent="1" verticalAlignment="center" zPosition="2"/>
+		<widget name="EditSettingsButton" backgroundColor="OE_Background" pixmaps="extensions/lan-seloff.png,extensions/lan-sel300.png" alphaTest="blend" position="440,888" size="550,40" zPosition="2"/>
 		<widget name="InfoTextBorder" position="120,340" size="595,310" zPosition="2"/>
-		<eLabel backgroundColor="white" position="170,275" size="750,2" zPosition="9"/>
-		<eLabel backgroundColor="white" position="170,425" size="750,2" zPosition="9"/>
-		<eLabel backgroundColor="white" position="170,575" size="750,2" zPosition="9"/>
-		<eLabel backgroundColor="white" position="170,725" size="750,2" zPosition="9"/>
-		<eLabel backgroundColor="white" position="170,875" size="750,2" zPosition="-9"/>
+		<eLabel backgroundColor="#0000fafa" position="170,275" size="750,2" zPosition="9"/>
+		<eLabel backgroundColor="#0000fafa" position="170,425" size="750,2" zPosition="9"/>
+		<eLabel backgroundColor="#0000fafa" position="170,575" size="750,2" zPosition="9"/>
+		<eLabel backgroundColor="#0000fafa" position="170,725" size="750,2" zPosition="9"/>
+		<eLabel backgroundColor="#0000fafa" position="170,875" size="750,2" zPosition="-9"/>
 	</screen>
 	<!-- NETWORK ADAPTER SETUP -->
 	<screen name="AdapterSetup" title="Network Setup" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
@@ -3750,7 +3756,7 @@
 		<panel name="HelpInformation"/>
 		<widget name="list" font="RegularBold;26" scrollbarMode="showOnDemand" scrollbarForegroundColor="blue_light" scrollbarBorderColor="blue_light" backgroundColor="OE_Background" position="410,155" zPosition="10" size="1490,670" transparent="1"/>
 		<eLabel backgroundColor="blue_light" position="410,830" size="1490,2" zPosition="2"/>
-		<widget source="description" render="Label" font="RegularBold;28" foregroundColor="blue_light" backgroundColor="OE_Background" position="410,848" size="1490,70" transparent="1" horizontalAlignment="center" verticalAlignment="center" zPosition="3"/>
+		<widget source="description" render="Label" font="RegularBold;27" foregroundColor="#0000fafa" backgroundColor="OE_Background" position="410,848" size="1490,70" transparent="1" horizontalAlignment="left" verticalAlignment="center" zPosition="3"/>
 	</screen>
 	<!-- FLASHIMAGE -->
 	<screen name="FlashImage" position="fill" zPosition="10" flags="wfNoBorder">
@@ -3759,7 +3765,7 @@
 		<widget name="progress_counter" position="1110,230" size="150,50" backgroundColor="OE_Background" font="RegularBold;28" foregroundColor="blue_light" zPosition="10" transparent="1"/>
 		<widget name="progress" position="410,280" size="1490,50" foregroundColor="blue_light" scrollbarBorderWidth="2" scrollbarBorderColor="green_light" zPosition="10" transparent="1"/>
 		<eLabel backgroundColor="blue_light" position="410,830" size="1490,2" zPosition="2"/>
-		<widget name="info" font="RegularBold;24" foregroundColor="blue_light" backgroundColor="OE_Background" position="410,848" size="1490,90" transparent="1" zPosition="10" horizontalAlignment="center" verticalAlignment="center"/>
+		<widget name="info" font="RegularBold;24" foregroundColor="#0000fafa" backgroundColor="OE_Background" position="410,848" size="1490,90" transparent="1" zPosition="10" horizontalAlignment="left" verticalAlignment="center"/>
 	</screen>
 	<!-- AUTO BACKUP -->
 	<screen name="Config" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
